@@ -5,8 +5,6 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import no.neksa.logic.User;
-
 /**
  * TODO
  *
@@ -18,7 +16,7 @@ public class SHA256 {
             final MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(newPassword.getBytes("UTF-8"));
             final BigInteger bigInt = new BigInteger(1, md.digest());
-            final String hash = bigInt.toString(16);
+            return bigInt.toString(16);
         } catch(NoSuchAlgorithmException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }

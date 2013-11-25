@@ -43,7 +43,7 @@ public class UserDaoTest {
         connection.close();
     }
 
-    public static void insertUser(final Connection connection, final User user) throws SQLException {
+    private static void insertUser(final Connection connection, final User user) throws SQLException {
         final PreparedStatement preparedStatement = connection.prepareStatement(sql.getProperty(INSERT_USER));
         preparedStatement.setString(1, user.getUsername());
         preparedStatement.setString(2, user.getFullName());

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
-    <context-root></context-root>
-    <security-domain>java:/jaas/sprealm</security-domain>
+    <context-root/>
+    <security-domain>java:/jaas/spRealm</security-domain>
 </jboss-web>

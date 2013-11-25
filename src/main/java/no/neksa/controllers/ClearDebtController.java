@@ -60,7 +60,7 @@ public class ClearDebtController {
     }
 
     public void clearDebt() {
-        if (!amountToPayBackMoreThanOwed()){
+        if (amountToPayBackIsEqualOrLessThanAmountOwed()){
             protocols.clearDebt(amountToPayBack, userToPayBack);
             messages.addMessage(i18nBundle.getString(PropertyProducer.CONFIRM_DEBT_CLEARED));
         } else {
@@ -71,8 +71,8 @@ public class ClearDebtController {
         populateDebtOverviewMap();
     }
 
-    private boolean amountToPayBackMoreThanOwed() {
-        return amountToPayBack > getAmountOwedSelectedUser();
+    private boolean amountToPayBackIsEqualOrLessThanAmountOwed() {
+        return amountToPayBack <= getAmountOwedSelectedUser();
     }
 
     private void initializeSelector() {

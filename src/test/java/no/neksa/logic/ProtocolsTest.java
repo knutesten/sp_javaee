@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import no.neksa.controllers.ProtocolController;
 import no.neksa.persistence.ProtocolDao;
 
 import org.junit.Test;

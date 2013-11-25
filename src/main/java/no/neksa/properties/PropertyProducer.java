@@ -24,7 +24,6 @@ public class PropertyProducer {
     public static final String INSERT_PROTOCOL            = "insert_protocol";
 
     public static final String DATABASE_JNDI     = "database_jndi";
-    public static final String DATABASE_URL      = "database_url";
     public static final String DATABASE_USERNAME = "database_username";
     public static final String DATABASE_PASSWORD = "database_password";
     public static final String DATABASE_MOCK_URL = "database_mock_url";

@@ -8,7 +8,7 @@ import javax.faces.context.FacesContext;
  *
  * @author Knut Esten Melandsø Nekså
  */
-public class Messages {
+class Messages {
     public void addMessage(final String message) {
         final FacesContext context = FacesContext.getCurrentInstance();
         context.addMessage(null, new FacesMessage(message));
