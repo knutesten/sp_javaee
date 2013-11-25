@@ -10,8 +10,8 @@
         <ui:composition template="template/layout.xhtml">
             <ui:param value="#{i18n['create.title']}" name="title"/>
             <ui:define name="content">
-                <p:messages/>
                 <h:form styleClass="standard-form" id="create-form">
+                    <p:messages/>
                     <h:outputLabel value="#{i18n['create.ware']}"/>
                     <h:inputText styleClass="text-input" value="#{protocolController.ware}"/>
                     <h:outputLabel value="#{i18n['create.price']}"/>
