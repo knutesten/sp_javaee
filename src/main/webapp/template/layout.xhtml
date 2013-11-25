@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+        <title>
+            #{i18n['head.title']}
+        </title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet/less" type="text/css" href="../styles/style.less"/>
+    </h:head>
+
+    <h:body>
+        <div class="header">
+            <div class="back-button">
+                <h:link value="#{i18n['header.back']}" outcome="index"/>
+            </div>
+            <div class="title">
+                <h1>#{title}</h1>
+            </div>
+        </div>
+
+        <div id="content">
+            <ui:insert name="content"/>
+        </div>
+    </h:body>
+    <script src="../libs/less-1.5.0.min.js"></script>
+
+</html>

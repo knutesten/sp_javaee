@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>
+        #{i18n['head.title']}
+    </title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet/less" type="text/css" href="styles/style.less"/>
+</h:head>
+
+<h:body>
+    <div class="nav">
+        <h:link styleClass="nav-item" outcome="create">
+            <h1>#{i18n['menu.create']}</h1>
+        </h:link>
+        <h:link styleClass="nav-item" outcome="clear">
+            <h1>#{i18n['menu.clear']}</h1>
+        </h:link>
+        <h:link styleClass="nav-item" outcome="overview">
+            <h1>#{i18n['menu.overview']}</h1>
+        </h:link>
+        <h:link styleClass="nav-item" outcome="password">
+            <h1>#{i18n['menu.password']}</h1>
+        </h:link>
+    </div>
+</h:body>
+
+<script src="libs/less-1.5.0.min.js"></script>
+
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+    <ui:composition template="template/layout.xhtml">
+        <ui:param value="#{i18n['overview.title']}" name="title"/>
+        <ui:define name="content">
+            <h:dataTable styleClass="standard-table"
+                         columnClasses=",number-cell"
+                         rowClasses="odd,even"
+                         value="#{overviewController.overview}"
+                         var="overviewEntry">
+                <h:column>
+                    <f:facet name="header">#{i18n['overview.name']}</f:facet>
+                    #{overviewEntry.key.fullName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{i18n['overview.sumAmountOwed']}</f:facet>
+                    <h:outputText value="#{overviewEntry.value}" converter="currencyConverter"/>
+                </h:column>
+            </h:dataTable>
+
+            <h:dataTable styleClass="standard-table"
+                         columnClasses=",,,,number-cell"
+                         rowClasses="odd,even"
+                         value="#{overviewController.protocolList}"
+                         var="protocol">
+                <h:column>
+                    <f:facet name="header">#{i18n['overview.date']}</f:facet>
+                    <h:outputText value="#{protocol.date}">
+                        <f:convertDateTime pattern="dd-MM-yyyy"/>
+                    </h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{i18n['overview.buyer']}</f:facet>
+                    #{protocol.buyer.fullName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{i18n['overview.debtor']}</f:facet>
+                    #{protocol.debtor.fullName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{i18n['overview.ware']}</f:facet>
+                    #{protocol.ware}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{i18n['overview.amountOwed']}</f:facet>
+                    <h:outputText value="#{protocol.amountOwed}" converter="currencyConverter"/>
+                </h:column>
+            </h:dataTable>
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

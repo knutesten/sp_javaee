@@ -1,0 +1,45 @@
+@table-cell-border-color: cornflowerblue;
+@table-border-color: #33CC33;
+@table-background-color: #DCE2DE;
+@table-header-background-color: darkgreen;
+@even-color: #F5FBF7;
+@protocol-row-padding: 10px;
+
+.standard-table {
+  background: @table-background-color;
+  border-spacing: 0;
+  border-collapse: separate;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-size: 20px;
+
+  thead {
+    margin: 0;
+    background: @table-header-background-color;
+    text-align: left;
+
+    th {
+      font-size: 25px;
+      color: white;
+      padding: 10px;
+      border: 0;
+    }
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  .number-cell {
+    text-align: right;
+  }
+
+  .even {
+    background: @even-color;
+  }
+
+  .odd {
+    background: @table-background-color;
+  }
+}

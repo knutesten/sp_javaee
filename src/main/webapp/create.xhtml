@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:body>
+        <ui:composition template="template/layout.xhtml">
+            <ui:param value="#{i18n['create.title']}" name="title"/>
+            <ui:define name="content">
+                <p:messages/>
+                <h:form styleClass="standard-form" id="create-form">
+                    <h:outputLabel value="#{i18n['create.ware']}"/>
+                    <h:inputText styleClass="text-input" value="#{protocolController.ware}"/>
+                    <h:outputLabel value="#{i18n['create.price']}"/>
+                    <h:inputText styleClass="text-input" value="#{protocolController.price}">
+                        <f:convertNumber minFractionDigits="2" maxFractionDigits="2"/>
+                    </h:inputText>
+                    <h:outputLabel value="#{i18n['create.date']}"/>
+                    <h:inputText styleClass="text-input" value="#{protocolController.date}">
+                        <f:convertDateTime pattern="dd-MM-yyyy"/>
+                    </h:inputText>
+                    <h:selectManyCheckbox layout="pageDirection"
+                                          value="#{protocolController.selectedDebtors}"
+                                          converter="userConverter">
+                        <f:selectItems value="#{protocolController.userMap}"/>
+                    </h:selectManyCheckbox>
+                    <h:commandButton styleClass="submit-button" value="#{i18n['create.create']}" action="#{protocolController.createProtocol}"/>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

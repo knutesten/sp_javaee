@@ -1,0 +1,41 @@
+@main-background-color: black;
+
+.user-select-none(@args: none) {
+  -webkit-user-select: @args;
+  -moz-user-select: @args;
+  -ms-user-select: @args;
+  -o-user-select: @args;
+  user-select: @args;
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+  background: @main-background-color;
+}
+
+.nav-item {
+  color: white;
+  height: 100px;
+  background: @main-background-color;
+  display: block;
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    background: white;
+    color: @main-background-color;
+  }
+
+  h1 {
+    .user-select-none();
+    cursor: @main-background-color;
+    padding-top: 20px;
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+  }
+}

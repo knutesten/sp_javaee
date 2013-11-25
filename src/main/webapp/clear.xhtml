@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+    <ui:composition template="template/layout.xhtml">
+        <ui:param value="#{i18n['clear.title']}" name="title"/>
+        <ui:define name="content">
+            <h:form styleClass="standard-form">
+                <p:messages/>
+                <h:outputLabel value="#{i18n['clear.user']}"/>
+                <h:selectOneMenu value="#{clearDebtController.userToPayBack}"
+                                 onchange="submit()"
+                                 converter="userConverter">
+                    <f:selectItems value="#{clearDebtController.usersOwed}"/>
+                </h:selectOneMenu>
+                <h:outputLabel value="#{i18n['clear.amount']}"/>
+                <h:inputText styleClass="text-input" value="#{clearDebtController.amountToPayBack}"/>
+                <h:commandButton styleClass="submit-button" value="#{i18n['clear.clear']}" action="#{clearDebtController.clearDebt}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>
