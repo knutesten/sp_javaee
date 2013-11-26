@@ -29,9 +29,13 @@ public class DatabaseImpl implements Database {
     private DataSource dataSource;
 
     @PostConstruct
-    public void initialize() throws NamingException {
-        final String jndi = dbProperties.getProperty(DATABASE_JNDI);
-        dataSource = (DataSource) new InitialContext().lookup(jndi);
+    public void initialize() {
+        try {
+            final String jndi = dbProperties.getProperty(DATABASE_JNDI);
+            dataSource = (DataSource) new InitialContext().lookup(jndi);
+        } catch (NamingException ne) {
+            ne.printStackTrace();
+        }
     }
 
     @Override

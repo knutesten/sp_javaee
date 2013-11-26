@@ -27,7 +27,9 @@
                                           converter="userConverter">
                         <f:selectItems value="#{protocolController.userMap}"/>
                     </h:selectManyCheckbox>
-                    <h:commandButton styleClass="submit-button" value="#{i18n['create.create']}" action="#{protocolController.createProtocol}"/>
+                    <h:commandButton styleClass="submit-button"
+                                     value="#{i18n['create.create']}"
+                                     action="#{protocolController.createProtocol}"/>
                 </h:form>
             </ui:define>
         </ui:composition>
