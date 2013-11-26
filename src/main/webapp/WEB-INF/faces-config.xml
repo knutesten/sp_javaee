@@ -10,7 +10,7 @@
         </resource-bundle>
         <message-bundle>ValidationMessages</message-bundle>
         <locale-config>
-            <default-locale>no</default-locale>
+            <default-locale>no_NO</default-locale>
         </locale-config>
     </application>
 </faces-config>
