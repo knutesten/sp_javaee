@@ -1,12 +1,13 @@
 package no.neksa.validation;
 
 import javax.faces.bean.ApplicationScoped;
-import javax.inject.Inject;
+import javax.faces.context.FacesContext;
+//import javax.inject.Inject;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import no.neksa.logic.User;
-import no.neksa.logic.Users;
+//import no.neksa.logic.Users;
 
 /**
  * TODO
@@ -16,8 +17,9 @@ import no.neksa.logic.Users;
 
 @ApplicationScoped
 public class SelectedDebtorsValidator implements ConstraintValidator<SelectedDebtors, User[]> {
-    @Inject
-    private Users users;
+    // Does not work with glassfish for some reason.
+//    @Inject
+//    private Users users;
 
     @Override
     public void initialize(final SelectedDebtors constraintAnnotation) {
@@ -25,9 +27,10 @@ public class SelectedDebtorsValidator implements ConstraintValidator<SelectedDeb
 
     @Override
     public boolean isValid(final User[] value, final ConstraintValidatorContext context) {
-        final User loggedInUser = users.getLoggedInUser();
+        final String loggedInUsername =
+                FacesContext.getCurrentInstance().getExternalContext().getUserPrincipal().getName();
         for (final User user : value)
-            if(!user.equals(loggedInUser))
+            if(!user.getUsername().equals(loggedInUsername))
                 return true;
         return false;
     }

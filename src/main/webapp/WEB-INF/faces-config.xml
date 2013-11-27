@@ -11,6 +11,8 @@
         <message-bundle>ValidationMessages</message-bundle>
         <locale-config>
             <default-locale>no_NO</default-locale>
+            <supported-locale>no_NO</supported-locale>
+            <supported-locale>en_US</supported-locale>
         </locale-config>
     </application>
 </faces-config>
