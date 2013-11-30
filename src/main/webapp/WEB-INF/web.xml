@@ -12,7 +12,7 @@
     </security-constraint>
     <login-config>
         <auth-method>BASIC</auth-method>
-        <realm-name>jdbc-realm</realm-name>
+        <realm-name>spRealm</realm-name>
     </login-config>
 
     <!--Set up servlet-->
