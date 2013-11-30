@@ -16,7 +16,6 @@
         <junit.version>4.11</junit.version>
         <mockito.version>1.9.5</mockito.version>
         <derby.version>10.10.1.1</derby.version>
-        <mysql.version>5.1.26</mysql.version>
         <javaee.version>7.0</javaee.version>
         <primefaces.version>4.0</primefaces.version>
     </properties>
@@ -48,11 +47,6 @@
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
             <version>${derby.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
         </dependency>
     </dependencies>
 

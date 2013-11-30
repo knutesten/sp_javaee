@@ -13,7 +13,7 @@ import javax.inject.Inject;
 
 import static no.neksa.properties.PropertyProducer.*;
 
-import no.neksa.logic.User;
+import no.neksa.model.User;
 import no.neksa.properties.Sql;
 
 /**

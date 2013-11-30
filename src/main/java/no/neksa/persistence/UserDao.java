@@ -2,7 +2,7 @@ package no.neksa.persistence;
 
 import java.util.List;
 
-import no.neksa.logic.User;
+import no.neksa.model.User;
 
 /**
  * TODO

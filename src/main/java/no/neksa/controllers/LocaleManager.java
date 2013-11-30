@@ -31,10 +31,10 @@ public class LocaleManager implements Serializable {
         return locale;
     }
 
-    private int i = 0;
-    public void switchLocale() {
-        setLocale(supportedLocales.get(++i % supportedLocales.size()));
-    }
+//    private int i = 0;
+//    public void switchLocale() {
+//        setLocale(supportedLocales.get(++i % supportedLocales.size()));
+//    }
 
     public void setLocale(final Locale newLocale) {
         locale = newLocale;

@@ -12,9 +12,9 @@ import java.util.ResourceBundle;
 
 import javax.inject.Inject;
 
-import no.neksa.logic.Protocol;
-import no.neksa.logic.User;
-import no.neksa.logic.Users;
+import no.neksa.model.Protocol;
+import no.neksa.model.User;
+import no.neksa.model.Users;
 import no.neksa.properties.I18nBundle;
 import no.neksa.properties.Sql;
 
@@ -55,7 +55,6 @@ public class ProtocolDaoImpl implements ProtocolDao {
             preparedStatement.setString(1, user.getUsername());
             preparedStatement.setString(2, user.getUsername());
 
-
             final ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 final Protocol protocol = getProtocolFromResultSet(resultSet);
@@ -69,15 +68,15 @@ public class ProtocolDaoImpl implements ProtocolDao {
     }
 
     private Protocol getProtocolFromResultSet(final ResultSet resultSet) throws SQLException {
-        String         ware      = resultSet.getString("ware");
+        String     ware      = resultSet.getString("ware");
         if (ware.equals("{clear}")) {
             ware = resourceBundle.getString(CLEAR_DEBT_DESCRIPTION);
         }
-        final int      price     = resultSet.getInt("price");
-        final int      amoutOwed = resultSet.getInt("amount_owed");
-        final Date     date      = new Date(resultSet.getLong("date"));
-        final User     debtor    = users.findCachedUser(resultSet.getString("debtor"));
-        final User     buyer     = users.findCachedUser(resultSet.getString("buyer"));
+        final int  price     = resultSet.getInt("price");
+        final int  amoutOwed = resultSet.getInt("amount_owed");
+        final Date date      = new Date(resultSet.getLong("date"));
+        final User debtor    = users.findCachedUser(resultSet.getString("debtor"));
+        final User buyer     = users.findCachedUser(resultSet.getString("buyer"));
         return new Protocol(ware, price, amoutOwed, date, buyer, debtor);
     }
 

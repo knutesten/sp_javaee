@@ -13,9 +13,9 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 
 import no.neksa.authentication.Authentication;
-import no.neksa.logic.Protocols;
-import no.neksa.logic.User;
-import no.neksa.logic.Users;
+import no.neksa.model.Protocols;
+import no.neksa.model.User;
+import no.neksa.model.Users;
 import no.neksa.properties.I18nBundle;
 import no.neksa.properties.PropertyProducer;
 import no.neksa.properties.ValidationMessageBundle;

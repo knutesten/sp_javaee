@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.validation.constraints.Size;
 
-import no.neksa.logic.Users;
+import no.neksa.model.Users;
 import no.neksa.properties.I18nBundle;
 import no.neksa.properties.PropertyProducer;
 import no.neksa.properties.ValidationMessageBundle;

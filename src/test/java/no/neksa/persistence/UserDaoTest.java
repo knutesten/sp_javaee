@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
 
-import no.neksa.logic.User;
+import no.neksa.model.User;
 import no.neksa.properties.PropertyProducer;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

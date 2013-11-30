@@ -42,6 +42,6 @@ public class DatabaseImpl implements Database {
     public Connection createConnection() throws SQLException {
         final String username = dbProperties.getProperty(DATABASE_USERNAME);
         final String password = dbProperties.getProperty(DATABASE_PASSWORD);
-        return dataSource.getConnection(username, password);
+        return dataSource.getConnection();
     }
 }

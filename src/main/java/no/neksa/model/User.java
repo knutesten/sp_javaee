@@ -1,4 +1,6 @@
-package no.neksa.logic;
+package no.neksa.model;
+
+import javax.inject.Inject;
 
 /**
  * TODO

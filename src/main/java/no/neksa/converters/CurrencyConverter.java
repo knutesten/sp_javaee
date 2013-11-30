@@ -11,7 +11,7 @@ import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 
 import no.neksa.controllers.LocaleManager;
-import no.neksa.logic.Protocols;
+import no.neksa.model.Protocols;
 
 /**
  * TODO

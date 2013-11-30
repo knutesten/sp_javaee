@@ -1,4 +1,4 @@
-package no.neksa.logic;
+package no.neksa.model;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

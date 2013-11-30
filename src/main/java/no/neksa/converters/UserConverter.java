@@ -6,8 +6,8 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 
-import no.neksa.logic.User;
-import no.neksa.logic.Users;
+import no.neksa.model.User;
+import no.neksa.model.Users;
 
 /**
  * TODO

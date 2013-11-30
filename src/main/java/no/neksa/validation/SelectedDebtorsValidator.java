@@ -6,8 +6,8 @@ import javax.faces.context.FacesContext;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import no.neksa.logic.User;
-//import no.neksa.logic.Users;
+import no.neksa.model.User;
+//import no.neksa.model.Users;
 
 /**
  * TODO

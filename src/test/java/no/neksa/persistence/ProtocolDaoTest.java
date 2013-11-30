@@ -13,9 +13,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
-import no.neksa.logic.Protocol;
-import no.neksa.logic.User;
-import no.neksa.logic.Users;
+import no.neksa.model.Protocol;
+import no.neksa.model.User;
+import no.neksa.model.Users;
 import no.neksa.properties.PropertyProducer;
 
 import org.junit.AfterClass;

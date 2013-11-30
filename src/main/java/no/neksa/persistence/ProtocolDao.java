@@ -2,8 +2,8 @@ package no.neksa.persistence;
 
 import java.util.List;
 
-import no.neksa.logic.Protocol;
-import no.neksa.logic.User;
+import no.neksa.model.Protocol;
+import no.neksa.model.User;
 
 /**
  * TODO

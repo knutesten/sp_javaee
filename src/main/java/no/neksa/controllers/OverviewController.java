@@ -7,9 +7,9 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import no.neksa.logic.Protocol;
-import no.neksa.logic.Protocols;
-import no.neksa.logic.User;
+import no.neksa.model.Protocol;
+import no.neksa.model.Protocols;
+import no.neksa.model.User;
 
 /**
  * TODO

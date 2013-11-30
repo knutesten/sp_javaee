@@ -12,9 +12,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
-import no.neksa.logic.Protocols;
-import no.neksa.logic.User;
-import no.neksa.logic.Users;
+import no.neksa.model.Protocols;
+import no.neksa.model.User;
+import no.neksa.model.Users;
 import no.neksa.properties.I18nBundle;
 import no.neksa.properties.PropertyProducer;
 import no.neksa.validation.SelectedDebtors;
