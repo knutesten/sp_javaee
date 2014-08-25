@@ -51,7 +51,7 @@
     <context-service jndi-name="concurrent/__defaultContextService" object-type="system-all"></context-service>
     <managed-thread-factory jndi-name="concurrent/__defaultManagedThreadFactory" object-type="system-all"></managed-thread-factory>
     <jdbc-connection-pool datasource-classname="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource" res-type="javax.sql.DataSource" name="jdbc">
-      <property name="User" value="root"></property>
+      <property name="User" value="admin"></property>
       <property name="AutoReconnectForPools" value="false"></property>
       <property name="LoggerClassName" value="com.mysql.jdbc.log.StandardLogger"></property>
       <property name="ServerName" value="db"></property>
@@ -71,7 +71,7 @@
       <property name="AllowUrlInLocalInfile" value="false"></property>
       <property name="DatabaseName" value="sp"></property>
       <property name="NullNamePatternMatchesAll" value="true"></property>
-      <property name="Password" value="test"></property>
+      <property name="Password" value="hester er fine"></property>
       <property name="AllowLoadLocalInfile" value="true"></property>
       <property name="PreparedStatementCacheSqlLimit" value="256"></property>
       <property name="Logger" value="com.mysql.jdbc.log.StandardLogger"></property>
